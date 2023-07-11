@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ### Primary */
+
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+  /* ### Neutral */
+
+  --Dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+  background-color: var(--Dark-cyan);
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+main {
+  max-width: 90%;
+  min-width: 250px;
+  background-color: white;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0.625rem 0.625rem 1.25rem rgba(0, 0, 0, 0.281);
+}
+
+.container-bg-top {
+  width: 100%;
+  position: relative;
+}
+
+.bg_pattern {
+  width: 100%;
+  display: block;
+}
+.container_avatar {
+  border-radius: 6.25rem;
+  width: 30%;
+  overflow: hidden;
+  position: absolute;
+  top: 60%;
+  left: 34%;
+}
+
+.avatar {
+  border-radius: 6.25rem;
+  width: 100%;
+
+  border: 0.125rem solid white;
+}
+
+.bg-top {
+  width: 31.25rem;
+  position: fixed;
+  top: -12.5rem;
+  left: -18.75rem;
+  z-index: -1;
+  animation: spin 2s  infinite;
+}
+.bg-bottom {
+  width: 31.25rem;
+  position: fixed;
+  bottom: -12.5rem;
+  right: -19.375rem;
+  z-index: -1;
+  animation: spin 2s  infinite;
+}
+.name {
+  margin: 3.75rem 0 0 0;
+  font-size: 1.1rem;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.age {
+  font-size: 1.1rem;
+  color: var(--Dark-gray);
+  font-weight: 700;
+  margin-left: 0.625rem;
+}
+
+.city {
+  margin-bottom: 1.875rem;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--Dark-gray);
+  margin-top: 0.625rem;
+}
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  border-top: 0.0625rem solid rgba(128, 128, 128, 0.278);
+  width: 18.75rem;
+  padding: 1.25rem;
+}
+
+.highlights {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.5625rem;
+}
+
+.description {
+  font-size: 0.8rem;
+  color: var(--Dark-gray);
+  font-weight: 400;
+}
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+@media (min-width: 43.75rem) {
+  .bg-top {
+    width: 62.5rem;
+    top: -25rem;
+  }
+  .bg-bottom {
+    width: 62.5rem;
+    bottom: -25rem;
+  }
+}
